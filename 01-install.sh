@@ -7,3 +7,8 @@ LOCATION=$(realpath "$0")
 DIR=$(dirname "$LOCATION")
 
 sudo snap install microk8s --classic
+
+sudo usermod -a -G microk8s dps0340
+sudo chown -R dps0340 ~/.kube
+
+sudo newgrp microk8s
