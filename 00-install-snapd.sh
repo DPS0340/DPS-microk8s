@@ -14,6 +14,8 @@ cd $DIR/snapd
 CC=/usr/bin/gcc makepkg -si
 cd ..
 
+rm -rf $DIR/snapd
+
 sudo systemctl enable --now snapd
 sudo systemctl enable --now snapd.socket
 
