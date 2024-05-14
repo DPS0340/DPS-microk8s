@@ -11,6 +11,8 @@ git clone https://aur.archlinux.org/snapd.git
 cd $DIR/snapd
 
 # For prevent seccomp.h dependency missing on nix-env gcc
+# Arch (pacman) only
+# FIXME: Ports with multiple distros
 CC=/usr/bin/gcc makepkg -si
 cd ..
 
