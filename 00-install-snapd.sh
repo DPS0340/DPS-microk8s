@@ -18,6 +18,7 @@ cd ..
 
 rm -rf $DIR/snapd
 
+sudo ln -s /var/lib/snapd/snap /snap
+
 sudo systemctl enable --now snapd
 sudo systemctl enable --now snapd.socket
-
